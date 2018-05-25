@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Shop Homepage - 60130500104</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/shop-homepage.css" rel="stylesheet">
+  <link href="css/login.css" rel="stylesheet">
+  <script src="JavaScript/LoginScript.js"></script>
+
+
+</head>
+
+
+<body onload="Checklogin()">
+  <div id="id01" class="modal" style="background: blanchedalmond">
+
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="pic/theme.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname">
+        <b>Username</b>
+      </label>
+      <input type="text" placeholder="Enter Username" id="user" name="uname" required>
+
+      <label for="psw">
+        <b>Password</b>
+      </label>
+      <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
+
+      <button onclick="login()" type="submit">Login </button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot
+        <a href="#">password?</a>
+      </span>
+    </div>
+  </div>
+  <div id="Allpage">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <script>
+
+        function Checklogin() {
+
+          if (window.localStorage.getItem('statusLogin')
+
+          ) {
+            document.getElementById('loginbutton').disabled = true;
+            document.getElementById('loginbutton').innerHTML = "Logined :D";
+            document.getElementById('register').disabled = false;
+            document.getElementById('register').style.display = "none";
+            document.getElementById('useruse').innerHTML = "User";
+            document.getElementById('logout').disabled = false;
+            document.getElementById('register').style.display = "visible";
+
+          } else {
+            document.getElementById('logout').disabled = true;
+            document.getElementById('logout').style.display = "none";
+          }
+        }
+      </script>
+      <div class="container">
+        <a class="navbar-brand" href="#">Welcome : </a>
+        <p id="useruse">Guest</p>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="AboutUs.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Service.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <button id="loginbutton" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+                <link href="JavaScript/LoginScript.js" rel="JavaScript"> Sign-in?
+              </button>
+              <button id="logout" onclick="logout()" style="width:auto;">
+                <link href="JavaScript/LoginScript.js" rel="JavaScript"> Logout?
+              </button>
+
+            </li>
+            <li>
+              <a href="Register.html">
+                <button id="register" onclick="" style="width:auto;">
+                  <link href="JavaScript/LoginScript.js" rel="JavaScript"> Register?
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-3">
+          <br>
+          <h1 class="my-4" id="#useBG">Watch Keeper</h1>
+          <div class="list-group">
+            <a href="#" class="list-group-item">Casio</a>
+            <a href="CommingSoon.html" class="list-group-item">Coming soon</a>
+          </div>
+
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+          <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" id="titileset" role="listbox" style="">
+              <div class="carousel-item active">
+                <img class="d-block img-fluid" id="titleimg" src="pic/tittle1.png" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block img-fluid" id="titleimg" src="pic/tittle2.png" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block img-fluid" id="titleimg" src="pic/tittle3.png" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+          <div class="row">
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+
+                <img class="card-img-top" src="pic/mf.png" alt="">
+
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="https://www.siam-watch.com/product/1338/casio-standard-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99-mtp-v300g-7a">Casio Standard รุ่น MTP-V300G-7A</a>
+                  </h4>
+                  <h5>฿1,800.00(sale)</h5>
+                  <p class="card-text">คุณสมบัติ
+                    <br> • กันน้ำ
+                    <br> • มีช่องแสดงวันและวันที่ และ แสดงแบบ 24 ชม
+                    <br> • ข้อมือเป็นแบบสแตนเลด</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+
+                <img class="card-img-top" src="pic/be.png" alt="">
+
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="https://www.siam-watch.com/product/1325/casio-standard-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99-mtp-x100g-1av">Casio standard รุ่น MTP-X100G-1AV
+                    </a>
+                  </h4>
+                  <h5>฿1,900.00(sale)</h5>
+                  <p class="card-text">คุณสมบัติ
+                    <br>
+                    <br>• กันน้ำลึก 50 เมตร
+                    <br>• ดีไซน์ตัวเรือนขนาดใหญ่แนวสปอร์ต
+                    <br>• มีช่องแสดงวันและวันที่</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img class="card-img-top" src="pic/5q.png" alt="">
+
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="https://www.siam-watch.com/product/1327/casio-standard-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99-mtp-e115gb-2av">Casio Standard รุ่น MTP-E115GB-2AV</a>
+                  </h4>
+                  <h5>฿2,190.00</h5>
+                  <p class="card-text">คุณสมบัติ
+                    <br>
+                    <br>• รุ่นคู่สีทองและสีกรมท่า
+                    <br>• การแสดงวันที่
+                    <br>• หน้าปัดเรโทรเกรดแสดงวันในรอบสัปดาห์
+                    <br>• กันน้ำลึก 50 เมตร
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+
+                <img class="card-img-top" src="pic/pz.jpg" alt="">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="https://www.siam-watch.com/product/1627/casio-analog-ladies%E2%80%99-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99-ltp-v005g-1b">Casio Analog-Ladies’ รุ่น LTP-V005G-1B</a>
+                  </h4>
+                  <h5>฿1,290.00</h5>
+                  <p class="card-text">คุณสมบัติ
+                    <br>• กันน้ำ
+                    <br>• สายสเตนเลสสตีล
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img class="card-img-top" src="pic/a1.jpg" alt="">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="https://www.siam-watch.com/product/1628/casio-analog-ladies%E2%80%99-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99-ltp-v005g-7b">Casio Analog-Ladies’ รุ่น LTP-V005G-7B</a>
+                  </h4>
+                  <h5>1,290.00฿</h5>
+                  <p class="card-text">คุณสมบัติ
+                    <br>• กันน้ำ
+                    <br>• สายสเตนเลสสตีล
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img class="card-img-top" src="pic/tc.jpg" alt="">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <br>
+                    <br>
+                    <br>
+                    <a href="https://www.siam-watch.com/product/1524/casio-analog-ladies-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99-lx-500h-7b">Casio ANALOG-LADIES' รุ่น LX-500H-7B
+                    </a>
+                  </h4>
+                  <h5>1,090.00฿</h5>
+                  <p class="card-text">คุณสมบัติ
+                    <br>• กันน้ำลึก 50 เมตร
+                    <br>• กรอบวงแหวนแวววาว
+                    <br>• การแสดงวันที่
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img class="card-img-top" src="pic/4h.jpg" alt="">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="https://www.siam-watch.com/product/1523/casio-analog-ladies-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99-lx-500h-2b">Casio ANALOG-LADIES' รุ่น LX-500H-2B</a>
+                  </h4>
+                  <h5>฿1,090.00</h5>
+                  <p class="card-text">คุณสมบัติ
+
+                    <br> • กันน้ำลึก 50 เมตร
+                    <br> • กรอบวงแหวนแวววาว
+                    <br> • การแสดงวันที่
+                    <br> วัสดุตัวเรือน / กรอบ: เรซิน สายเรซิน กระจกเรซิน
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img class="card-img-top" src="pic/9q.jpg" style="height: 37%;" alt="">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <br>
+                    <a href="https://www.siam-watch.com/product/1522/casio-analog-ladies-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99-lx-500h-4e">Casio ANALOG-LADIES' รุ่น LX-500H-4E</a>
+                  </h4>
+                  <h5>฿1,090.00</h5>
+                  <p class="card-text">คุณสมบัติ
+
+                    <br> • กันน้ำลึก 50 เมตร
+                    <br> • กรอบวงแหวนแวววาว
+                    <br> • การแสดงวันที่
+                    <br> วัสดุตัวเรือน / กรอบ: เรซิน สายเรซิน กระจกเรซิน
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img class="card-img-top" src="pic/gp.jpg" alt="">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="https://www.siam-watch.com/product/1349/casio-standard-10-year-battery-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99-aeq-110bw-9av">Casio Standard 10-YEAR BATTERY รุ่น AEQ-110BW-9AV
+                    </a>
+                  </h4>
+                  <h5>฿1,490.00</h5>
+                  <p class="card-text">คุณสมบัติ
+
+                    <br> อายุการใช้งานแบตเตอรี่ 10 ปี และแสดงเวลาโลก
+
+                    <br> • กันน้ำลึก 100 เมตร
+
+                    <br> • อายุการใช้งานแบตเตอรี่ 10 ปี
+
+                    <br> • แสดงเวลาโลก
+
+                    <br> • เก็บบันทึกย่อได้ 30 รายการ
+
+                    <br> • ตัวจับเวลาละเอียด 1/100 วินาที และ นาฬิกาปลุก
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img class="card-img-top" src="pic/ix.jpg" alt="">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="https://www.siam-watch.com/product/1348/casio-standard-10-year-battery-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99-aeq-100bw-9av">Casio Standard 10-YEAR BATTERY รุ่น AEQ-100BW-9AV</a>
+                  </h4>
+                  <h5>1,300.00฿</h5>
+                  <p class="card-text">คุณสมบัติ
+                    <br> อายุการใช้งานแบตเตอรี่ 10 ปี และแสดงเวลาโลก
+                    <br>• กันน้ำลึก 100 เมตร
+                    <br>• อายุการใช้งานแบตเตอรี่ 10 ปี
+                    <br>• แสดงเวลาโลก
+                    <br>• หน้าปัดแสดงแผนที่โลกแบบกลม
+                    <br>• เก็บบันทึกย่อได้ 30 รายการ
+                    <br>• ตัวจับเวลาละเอียด 1/100 วินาที และ นาฬิกาปลุก
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img class="card-img-top" src="pic/mf.jpg" alt="">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="https://www.siam-watch.com/product/1337/casio-standard-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99-mtp-v300d-7a">Casio Standard รุ่น MTP-V300D-7A</a>
+                  </h4>
+                  <h5>1,490.00฿</h5>
+                  <p class="card-text">Specifications
+                    <br>• Case / bezel: Ion plated
+                    <br>• Triple-fold Clasp Stainless Steel Band
+                    <br>• Mineral Glass
+                    <br>• Water Resistant
+                    <br>• Regular timekeeping
+                    <br>• Analog: 3 hands (hour, minute, second), 3 dials (24-hour, date, day)
+                    <br>• Accuracy: ±20 seconds per month
+                    <br>• Approx. battery life: 3 years on SR920SW
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img class="card-img-top" src="pic/0r.jpg" alt="">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="https://www.siam-watch.com/product/1336/casio-standard-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99-mtp-v300d-1a">Casio Standard รุ่น MTP-V300D-1A</a>
+                  </h4>
+                  <h5>1,490.00฿</h5>
+                  <p class="card-text">Specifications
+                    <br>• Case / bezel: Ion plated
+                    <br>• Triple-fold Clasp Stainless Steel Band
+                    <br>• Mineral Glass
+                    <br>• Water Resistant
+                    <br>• Regular timekeeping
+                    <br>• Analog: 3 hands (hour, minute, second), 3 dials (24-hour, date, day)
+                    <br>• Accuracy: ±20 seconds per month
+                    <br>• Approx. battery life: 3 years on SR920SW
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img class="card-img-top" src="pic/9z.jpg" alt="">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="https://www.siam-watch.com/product/1333/casio-standard-analog-mens-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99-mrw-210h-1av">Casio STANDARD Analog-Men's รุ่น MRW-210H-1AV</a>
+                  </h4>
+                  <h5>1,190.00฿</h5>
+                  <p class="card-text">Features
+                    <br>• 100-meter water resistance
+                    <br>• Big size diver style
+                    <br>• Day and date display
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img class="card-img-top" src="pic/q6.jpg" alt="">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="https://www.siam-watch.com/product/1334/casio-standard-analog-mens-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99-mrw-210h-7av">Casio STANDARD Analog-Men's รุ่น MRW-210H-7AV</a>
+                  </h4>
+                  <h5>1,190.00฿</h5>
+                  <p class="card-text">Features
+                    <br>• 100-meter water resistance
+                    <br>• Big size diver style
+                    <br>• Day and date display
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img class="card-img-top" src="pic/e3.jpg" alt="">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="https://www.siam-watch.com/product/1331/casio-standard-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99-w-735h-8avdf">Casio Standard รุ่น W-735H-8AVDF</a>
+                  </h4>
+                  <h5>1,190.00฿</h5>
+                  <p class="card-text">คุณสมบัติ
+                    <br> อายุการใช้งานแบตเตอรี่ 10 ปี
+                    <br>• ตัวจับเวลาละเอียด 1/100 วินาที
+                    <br> • การแจ้งเตือนแบบสั่น
+                    <br>• ตัวเรืองแสงโดดเด่น
+                    <br>• กันน้ำลึก 100 เมตร</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img class="card-img-top" src="pic/yp.jpg" alt="">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="https://www.siam-watch.com/product/1330/casio-standard-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99-w-735h-2avdf">Casio Standard รุ่น W-735H-2AVDF</a>
+                  </h4>
+                  <h5>1,190.00฿</h5>
+                  <p class="card-text">คุณสมบัติ
+                    <br> อายุการใช้งานแบตเตอรี่ 10 ปี
+                    <br>• ตัวจับเวลาละเอียด 1/100 วินาที
+                    <br> • การแจ้งเตือนแบบสั่น
+                    <br>• ตัวเรืองแสงโดดเด่น
+                    <br>• กันน้ำลึก 100 เมตร</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+          </div>
+          <!-- /.row -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; By Ittidate-60130500104 sec 2 <br>Platfrom sec 3</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </div>
+
+
+</body>
+
+</html>
